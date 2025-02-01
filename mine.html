@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm Sorry, My Love</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe6e6;
+            color: #333;
+            padding: 20px;
+        }
+        h1 {
+            color: #ff4d4d;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .gallery {
+            display: none;
+        }
+        .gallery img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        #loveBtn {
+            background-color: #ff4d4d;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+            display: none;
+        }
+        #loveBtn:hover {
+            background-color: #ff1a1a;
+        }
+        #letter {
+            display: block;
+            background-color: #ff4d4d;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        #letter:hover {
+            background-color: #ff1a1a;
+        }
+        #message {
+            display: none;
+            font-size: 20px;
+            color: #ff4d4d;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>I'm Sorry, My Love ❤️</h1>
+        <button id="letter" onclick="revealContent()">Click to Read My Letter</button>
+        <p id="message">"My love ❤️, I know I made a mistake, and it hurts me more than I can express 😔. The last thing I ever want is to cause you pain because you are my heart ❤️, my happiness 😊, and my everything ✨. Every moment without your smile feels empty 💔, and every second without your warmth feels cold 🥶. I can’t take back what happened, but I promise to make things right 💖. You mean the world to me 🌎, and I will never stop loving you 💞. Please forgive me, my love 😢❤️."</p>
+        <h2>Our Beautiful Memories</h2>
+        <div class="gallery">
+            <img src="1.jpg" alt="Memory 1">
+            <img src="2.jpg" alt="Memory 2">
+            <img src="3.jpg" alt="Memory 3">
+        </div>
+        <button id="loveBtn" onclick="showLove()">I Forgive You ❤️</button>
+        <p id="response" style="display:none; font-size: 20px; color: #ff4d4d;">Yay! I love you forever! ❤️</p>
+    </div>
+    <script>
+        function revealContent() {
+            document.getElementById('message').style.display = 'block';
+            document.querySelector('.gallery').style.display = 'block'; // Now selects only the <div>
+            document.getElementById('loveBtn').style.display = 'block';
+            document.getElementById('letter').style.display = 'none';
+        }
+        
+        function showLove() {
+            document.getElementById('response').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
